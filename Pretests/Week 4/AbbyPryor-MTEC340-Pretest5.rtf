@@ -1,0 +1,137 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Avenir-Book;
+\f3\froman\fcharset0 Times-Roman;\f4\fnil\fcharset0 Avenir-Heavy;\f5\fnil\fcharset0 Avenir-HeavyOblique;
+\f6\fmodern\fcharset0 CourierNewPSMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid201\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid301\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww15600\viewh17920\viewkind0
+\deftab720
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa293\partightenfactor0
+\ls1\ilvl0
+\f0\b\fs36 \cf0 Pretests - Chapter 5
+\f1\b0\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 Abigail Pryor, MTEC-340-001
+\f2\fs29\fsmilli14667 \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ulc0 \
+Chapter 5 \'96 Working with Classes, Structs, and OOP\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs24 \cf0 \ulnone \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f2\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 1.	\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 In your own words, what is a constructor and what are they for? How many constructors can a class have? What do we call the technique of having more than one constructor in a class? 	\
+\pard\tx720\pardeftab720\partightenfactor0
+
+\f4\b \cf0 	A constructor is a method that automatically sends a message whenever a class instance is made. They are 	children of the class in which they are contained, but can be used again in other classes. Using more than 	one constructor is called constructor overloading.\
+
+\f2\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 2.	\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What are three important characteristics of declaring a constructor?
+\fs29\fsmilli14667 \outl0\strokewidth0 \
+\pard\tx720\pardeftab720\partightenfactor0
+
+\f4\b\fs29\fsmilli14667 \cf0 \outl0\strokewidth0 \strokec2 	1.) If a constructor isn\'92t specified, C# will automatically create a default one which variables set to default 	type values (numbers = 0, Booleans = false, classes = null). \
+	2.) Custom constructors are defined with parameters and set class variable values at initiation.\
+	3.) A class can have multiple constructors.\
+
+\f2\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 3.	\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What are the differences between structs and classes? When should you use each one?\
+\ls4\ilvl0
+\f4\b 		They both serve as blueprints for objects that you make in programs, but structs are value types rather than referenced classes/constructors. So, when a struct is passed to another variable or assigned to something else, a new copy is made so the original is not used at all. You should use a class if its identity is important, you need to initialize its fields, or you need to inherit from a base class. You should use a struct if it\'92s a primitive type of data (int, long, byte) and its fields can be initialized to a default value.
+\f2\b0 \
+\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 4.	\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What is a reference type and what is a value type? How are they different?\
+\ls4\ilvl0
+\f4\b 		A reference type is passed by reference, and value types are passed by values. A reference type holds the reference to where the object is located in the program - the memory is being assigned, but not the actual data. This is good for larger objects with more complex data. A value type stores data in a corresponding variable with no references or connection to memory or location. It lets you copy simple objects quickly while keeping their identities separate from each other. Structs are value types and classes are reference type.
+\f2\b0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+5.	\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 In your own words, what is encapsulation?\
+\ls4\ilvl0
+\f4\b 		Encapsulation wraps up specified data and methods and places it under a single unit, or class.
+\f2\b0 \
+\
+6.	In your own words, what is inheritance? What are base and derived classes? What is passed to derived classes?
+\f4\b Inheritance allows you to take data and methods from another class and use it in a new class, without having to repeat any code. Base class is the \'93parent\'94 and the derived classes are the \'93children\'94. All of the member variables from the base class are passed down to any derived classes it has.
+\f2\b0 \
+\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 7.	\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What is the syntax for calling a parent class\'92s constructor? (Use arguments and composition in your answer.)\
+\ls4\ilvl0
+\f4\b 		To call the parent class\'92s constructor, you used the 
+\f5\i base()
+\f4\i0  keyword. The keyword base stands in for a constructor and allows the children to pass parameters up to the parent class. When you combine already existing structures and 
+\f5\i arguments
+\f4\i0  together to create something new, you get something called 
+\f5\i composition
+\f4\i0 .\
+\ls4\ilvl0
+\f2\b0 		\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 8.	\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 In your own words, what is polymorphism? What does it enable us to do?\
+\ls4\ilvl0
+\f4\b 		Polymorphism enables any derived, or child, classes to keep the same structure as their base class, or parent while still having separate identities with different purposes.
+\f2\b0 \
+\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 9.	\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What do the keywords 
+\f6 this
+\f2 , 
+\f6 virtual
+\f2 , and 
+\f6 override
+\f2  do?\
+		
+\f4\b The keyword 
+\f5\i this 
+\f4\i0 refers to the current instance of the class and also serves as a modifier of the first parameter of an extension method. (this.weapon = weapon;)\
+		The keyword 
+\f5\i virtual
+\f4\i0  is used for generating a virtual path for its derived classes when implementing method overriding. 
+\f5\i Override
+\f4\i0  is a modifier that is used to modify an inherited method from a base class.
+\f2\b0 \
+\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 10.	\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What is the 
+\f6 SerializeField
+\f2  attribute for? What is the syntax for using it (you might have to look at the Unity docs or the scripting API)?\
+		
+\f4\b You can use this attribute to display any custom variables for objects on the Inspector in Unity. It can serialize public non-static fields and private non-static fields. But it cannot serialize static fields or serialize properties. It can serialize all classes that inherit from GameObject, Component, Texture2D, etc., basic data types, and arrays/lists. [SerializeField]
+\f2\b0 \
+\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 11.	\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 How do you programmatically get an object in Unity? How do you programmatically get a component? (Please provide syntax and a one-line example.)\
+\ls4\ilvl0
+\f4\b 		You can use GetComponent() or Find() methods in the GameObject class. Example-GameObject.GetComponent<ComponentType>();\
+		Or, you can use the 
+\f5\i this 
+\f4\i0 keyword. Example - CamTransform = this.GetComponent<Transform>();
+\f2\b0 \
+\
+12. 	What are the advantages and disadvantages of referencing objects and components using code vs dragging and dropping via the inspector?\
+		
+\f4\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 The drag and drop option only works with public variables, not private. So you need to use serialize field within the code in order for it to work for private variables. GetComponent() needs to be saved in its own variables and Find() cannot be used in an Update() loop. GetComponent() is good for quickly getting data and components, but it only has access to the components the GameObject that it is referencing in the script. Drag and drop is good when you need to assign a few variables quickly, but Unity can lose connections between objects and variables if it isn\'92t directly in the code, which can make for a hard time exporting/collaborating.
+\f2\b0 \
+\
+\ls4\ilvl0\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+13.	Do a little research and tell me what pointer and memory addresses/locations are. (These are used in lower level languages like C/C++, but they may help understand\'a0references.)\
+		
+\f4\b A pointer is a variable that stores a memory address. The pointer is a primitive type of data, where the value stored in it is intended to be used as the memory address. The address itself is the location of where the variable is stored on the computer. This involves data tracking so the user can efficiently store or retrieve information from the device.
+\f2\b0 \
+\
+}
