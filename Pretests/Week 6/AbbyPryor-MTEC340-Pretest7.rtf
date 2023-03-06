@@ -1,0 +1,81 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Avenir-Book;
+\f3\froman\fcharset0 Times-Roman;\f4\fnil\fcharset0 Avenir-Heavy;\f5\fmodern\fcharset0 CourierNewPSMT;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww11520\viewh16100\viewkind0
+\deftab720
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa293\partightenfactor0
+\ls1\ilvl0
+\f0\b\fs36 \cf0 Pretests - Chapter 7
+\f1\b0\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 Abigail Pryor, MTEC-340-001
+\f2\fs29\fsmilli14667 \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ulc0 \
+Chapter 7 \'96 Movement, Camera Control, and Collisions
+\f3\fs24 \ulnone \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f2\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What are the constraint properties of a Rigidbody? 
+\f4\b It has the ability to Freeze Rotation and Position on the x, y, and z axes so the player can\'92t be rotated by accident during collisions or other physics interactions.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What is the purpose of the 
+\f5 Input.GetAxis
+\f2  function, and what arguments do we need to provide to it so it works correctly?
+\f4\b  It captures input axes and specifies the axis that we want by name. You need to declare public variables to be used as multipliers (MoveSpeed/RotateSpeed) and private variables to hold inputs from the player that are set to no value.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The 
+\f5 transform.Rotate
+\f2  function takes in a vector corresponding to the axis about which the rotation will occur. Note that the example on page 180 uses the up vector, which in addition to 
+\f5 Time.deltaTime
+\f2 , is multiplied by the gathered input axis times the rotation speed. Based on this information, how does the Rotate method determine the direction of rotation? How is the rotation speed influencing the actual speed of rotation? (Hint: look up how vector-scalar multiplication works.) 
+\f4\b When the vector is multiplied by a scalar, the size of the vector is scaled up or down. A positive scalar will change magnitude, not direction. But a negative scalar will cause the direction to be reversed.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 When should you use the MonoBehaviour 
+\f5 LateUpdate
+\f2  function? 
+\f4\b It executes AFTER the Update function, so you could use it to update camera behaviors like following the movement of the player.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What is the 
+\f5 TransformPoint
+\f2  method, and why is it being performed based on an object? 
+\f4\b It calculates and returns a relative position in the world space - you can use it on cameras or anything that you need to return the position of a target.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	6	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What parameter is needed for executing the camera\'92s 
+\f5 LookAt
+\f2  function? 
+\f4\b The transform parameter is passed in so that it can locate the target.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	7	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What are the two main components that drive Unity\'92s physics engine? How many of each one of these components can exist on a game object? 
+\f4\b Rigidbody and Colliders. You should only have one Rigidbody, but there can be several Colliders.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	8	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What is a compound collider setup? 
+\f4\b This is where you have several Collider components on a GameObject.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	9	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 For 3D Rigidbody components, what is kinematic movement and what is non-kinematic movement? 
+\f4\b Kinematic is when a Rigidbody attached to a GameObject does not register the physics system in the scene. It does not act according to physics. With non-kinematic, a Rigidbody is moved by applying force rather than manually changing the object\'92s Transform.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	10	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What happens if you do not add a Rigidbody component to a moving object? 
+\f4\b You are basically a ghost and can walk through objects in your scene.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	11	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 How do collisions work? What are the notifications associated with a collision, and what is the data type of its parameter? 
+\f4\b A collider comes into contact with a component, sends out a message/broadcast, and any script that adds one or more of those methods will recieve a notification when the Collider sends out a message - called an event.\
+}
