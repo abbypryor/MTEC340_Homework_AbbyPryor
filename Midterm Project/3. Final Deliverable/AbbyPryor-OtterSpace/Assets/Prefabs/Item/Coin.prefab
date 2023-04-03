@@ -251,6 +251,7 @@ MonoBehaviour:
   OnTriggerWithGameobject:
     m_PersistentCalls:
       m_Calls: []
+  audioSource: {fileID: 0}
 --- !u!114 &2744522497002126884
 MonoBehaviour:
   m_ObjectHideFlags: 0
