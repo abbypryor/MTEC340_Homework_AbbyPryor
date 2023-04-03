@@ -1,0 +1,92 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Avenir-Book;
+\f3\froman\fcharset0 Times-Roman;\f4\fmodern\fcharset0 CourierNewPSMT;\f5\fnil\fcharset0 Avenir-Heavy;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww15600\viewh19400\viewkind0
+\deftab720
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa293\partightenfactor0
+\ls1\ilvl0
+\f0\b\fs36 \cf0 Pretests - Chapter 8
+\f1\b0\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 Abigail Pryor, MTEC-340-001
+\f2\fs29\fsmilli14667 \expnd0\expndtw0\kerning0
+\ul \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ulc0 \
+Chapter 8 \'96 Scripting Game Mechanics\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs24 \cf0 \ulnone \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f2\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 {\listtext	1	}\expnd0\expndtw0\kerning0
+What is an 
+\f4 enum
+\f2  type? How do you use them? 
+\f5\b\fs24 \cf2 An enum type is a set, or collection, of named constants that belong to the same variable. You would use them when you want a collection of different values under the same parent type.
+\f2\b0\fs29\fsmilli14667 \cf0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	2	}\expnd0\expndtw0\kerning0
+What is the 
+\f4 |=
+\f2  (or logical) operator and when would you use it? 
+\f5\b\fs24 \cf2 A logical operator is a condition. You would use it to make sure that you do not have consecutive input checks override each other when an action triggers it in the game.
+\f2\b0\fs29\fsmilli14667 \cf0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	3	}\expnd0\expndtw0\kerning0
+Look at the Unity documentation and tell me what are the different available values for the 
+\f4 ForceMode
+\f2  enum. 
+\f5\b\fs24 \cf2 The different available values for the ForceMode enum are Force, Acceleration, Impulse, and Velocity Change. 
+\f2\b0\fs29\fsmilli14667 \cf0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	4	}\expnd0\expndtw0\kerning0
+What are layer masks? 
+\f5\b\fs24 \cf2 Layer masks are used to pick and choose which objects are included/excluded from collision detecting or rendering. They can change the amount of physics or rendering that is on a specific game object (choosing only certain objects for a light source or choosing which objects collide with others).
+\f2\b0\fs29\fsmilli14667 \cf0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	5	}\expnd0\expndtw0\kerning0
+Explain how projectiles are created and propelled forward. Mention why we use velocity and not AddForce, as well as the approach for destroying them to prevent cluttering our game. 
+\f5\b\fs24 \cf2 Projectiles are created with prefabs that contain a sprite and a Rigidbody component. To move it forward, you can set the initial velocity in the direction that it needs to travel. You do this by accessing the Rigidbody that is attached to the sprite and setting the velocity property. You would not use AddForce because it takes the object\'92s mass into account, which may cause issues with something like a projectile.
+\f2\b0\fs29\fsmilli14667 \cf0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	6	}\expnd0\expndtw0\kerning0
+What is the advantage of using manager classes? 
+\f5\b\fs24 \cf2 They can centralize and organize different game systems into a specific area in the code, and ultimately declutter things for improved efficiency/performance.
+\f2\b0\fs29\fsmilli14667 \cf0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	7	}\expnd0\expndtw0\kerning0
+What are 
+\f4 get
+\f2  and 
+\f4 set
+\f2  properties? What syntax do you use for declaring them and what role does the value keyword play? What is a backing variable and why would you use it alongside a public variable that utilizes properties? 
+\f5\b\fs24 \cf2 Get and set properties are a way of controlling access to class variables. You would use get \{ return _variable; \} set \{ _variable = value;\} . A backing variable is a private variable that stores the value of a property, used alongside a public variable that uses properties for more control over the value of the variable. 
+\f2\b0\fs29\fsmilli14667 \cf0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	8	}\expnd0\expndtw0\kerning0
+What are anchors in UI elements and how do you set them? 
+\f5\b\fs24 \cf2 Anchors define how a UI element is positioned and resized compared to its parent container. They make sure that a UI element is in the same position and size, even if the parent is resized/moved. To set them, you can either use Anchor Presets dropdown menu in the RectTransform component of an object, or change it manually. 
+\f2\b0\fs29\fsmilli14667 \cf0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	9	}\expnd0\expndtw0\kerning0
+What is a namespace? What is a 
+\f4 using
+\f2  directive?
+\f5\b\fs24 \cf2  A namespace is a way to organize classes, interfaces, enums, etc. into a logical hierarchy. It helps prevent naming conflicts between different parts of code. Using a directive is a way to make types from a namespace available to use without having to include the namespace in the type name every time you write it.
+\f2\b0\fs29\fsmilli14667 \cf0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	10	}\expnd0\expndtw0\kerning0
+What is 
+\f4 Time.timeScale
+\f2 ? When would you use it?
+\f5\b\fs24 \cf2  Time.timeScale is a variable that controls the time scale of the game. It is a scalar value that can change the speed of movement/animations. The default is always 1, which is normal time. If you make it .5, everything will move half as fast (slo-mo). Setting this to 0 will pause your game, but will not stop coroutines. 
+\f2\b0\fs29\fsmilli14667 \cf0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	11	}\expnd0\expndtw0\kerning0
+Explain how the button UI works. Mention the 
+\f4 OnClick
+\f2  event and how you set it. 
+\f5\b\fs24 \cf2 It allows you to have interactive buttons in the game UI. Button UI components can be added to any UI object (canvas/panel) and colors/text/images can be added too. OnClick event allows you to assign a function to the button so that it is called when it is clicked. On the component, you would press the Plus button next to OnClick, then drag your script containing what you want to call into the field.
+\f2\b0\fs29\fsmilli14667 \cf0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	12	}\expnd0\expndtw0\kerning0
+How do you load scenes? Mention namespaces and parameters (see Unity reference). 
+\f5\b\fs24 \cf2 You can load a new sene using the SceneManager.LoadScene(\'93Scene\'94) method. This method accepts a LoadSceneMode parameter, which tells specifically how the scene should be loaded. You can pass in 3 possible values : single (default), additive, and async. When you use this, it is located in the UnityEngine.SceneManagement namespace, so the script has to include that at the top. 
+\f2\b0\fs29\fsmilli14667 \cf0 \
+}

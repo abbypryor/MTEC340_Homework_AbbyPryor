@@ -5,7 +5,7 @@ using System.Linq;
 
 public class FireRateModifier : MonoBehaviour
 {
-    public float modifier = 0.2f;
+    public float modifier = 0.05f;
 
     private List<Weapon> weapons;
 
@@ -25,7 +25,7 @@ public class FireRateModifier : MonoBehaviour
 
     private void OnDestroy()
     {
-        foreach(Weapon w in weapons)
+        foreach (Weapon w in weapons)
         {
             w.removeFireRateModifier(modifier);
         }
@@ -34,6 +34,6 @@ public class FireRateModifier : MonoBehaviour
     public void addComponentToObject(GameObject go)
     {
         go.AddComponent<FireRateModifier>();
-        go.GetComponent<WeaponSetController>().weaponUpgradeCheck();
+
     }
 }

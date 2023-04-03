@@ -10,15 +10,15 @@ public class LifeUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        for(int i = 0; i < life.Length; i++)
+        for (int i = 0; i < life.Length; i++)
         {
-            if(i < lifeScriptable.value)
+            if (i < lifeScriptable.value)
             {
                 life[i].SetActive(true);
             }

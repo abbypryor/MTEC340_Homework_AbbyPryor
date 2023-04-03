@@ -35,7 +35,7 @@ public class Weapon : MonoBehaviour
 
     public void Shoot()
     {
-        if(timer == 0f)
+        if (timer == 0f)
         {
             //Debug.Log("Shoot");
             ObjectPool.GetInstance().requestObject(type).activate(transform.position, transform.rotation);
@@ -47,7 +47,7 @@ public class Weapon : MonoBehaviour
     {
         float mod = 1;
 
-        foreach(float f in fireRateModifiers)
+        foreach (float f in fireRateModifiers)
         {
             mod += f;
         }

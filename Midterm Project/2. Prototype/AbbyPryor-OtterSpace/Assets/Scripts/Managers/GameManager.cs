@@ -19,11 +19,22 @@ public class GameManager : MonoBehaviour
 
     public bool isPlaying = false;
 
+
     public UnityAction OnGameOverAction;
+
+
+    public AudioSource audioSource;
+    public AudioSource levelMusic;
+    public AudioSource coinSound;
+    public AudioSource lifeSound;
+    public AudioSource powerUpSound;
+    public AudioSource shootSound;
+    public AudioSource gameOverSound;
+
 
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -35,7 +46,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+ 
         items = new List<GameObject>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public static GameManager GetInstance()
@@ -70,6 +83,9 @@ public class GameManager : MonoBehaviour
     {
         isPlaying = true;
         spawnPlayer();
+
+        // Play level music
+        levelMusic.Play();
     }
 
     public void pauseGame()
@@ -85,6 +101,11 @@ public class GameManager : MonoBehaviour
     internal void gameOver()
     {
         isPlaying = false;
+
+        // Stop level music
+        levelMusic.Stop();
+
+        gameOverSound.Play();
         OnGameOverAction?.Invoke();
     }
     internal void addItem(GameObject gameObject)
@@ -94,10 +115,13 @@ public class GameManager : MonoBehaviour
 
     public void clearAllItem()
     {
-        foreach(GameObject go in items)
+        foreach (GameObject go in items)
         {
             Destroy(go);
         }
         items.Clear();
     }
+
+
+
 }

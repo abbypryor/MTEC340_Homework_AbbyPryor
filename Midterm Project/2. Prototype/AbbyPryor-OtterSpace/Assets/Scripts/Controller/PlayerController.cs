@@ -1,28 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 [RequireComponent(typeof(Moveable))]
+[RequireComponent(typeof(AudioSource))]
 public class PlayerController : MonoBehaviour
 {
     public InputHandler inputHandler;
+    public AudioClip coinSound;
 
     private Moveable moveable;
+    private AudioSource audioSource;
 
     private void Awake()
     {
         moveable = GetComponent<Moveable>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnSetDirection(Vector2 direction)
     {
-        //Debug.Log("test 123" + direction);
         moveable.setDirection(direction);
     }
 
@@ -35,4 +33,16 @@ public class PlayerController : MonoBehaviour
     {
         inputHandler.OnMoveAction -= OnSetDirection;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("Coin"))
+            {
+                AudioSource coinAudioSource = collision.gameObject.GetComponent<AudioSource>();
+                coinAudioSource.Play();
+                Destroy(collision.gameObject);
+            }
+        }
+    
+
 }

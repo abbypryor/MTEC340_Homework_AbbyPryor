@@ -18,7 +18,7 @@ public class WeaponSetController : MonoBehaviour
 
     private void deactivateAllWeapons()
     {
-        foreach(GameObject go in weaponSet)
+        foreach (GameObject go in weaponSet)
         {
             go.SetActive(false);
         }
@@ -26,7 +26,7 @@ public class WeaponSetController : MonoBehaviour
 
     public void activateWeaponSet(int upgradeLevel)
     {
-        for(int i = 0; i < weaponSet.Length; i++)
+        for (int i = 0; i < weaponSet.Length; i++)
         {
             if (i == upgradeLevel)
             {
@@ -44,7 +44,7 @@ public class WeaponSetController : MonoBehaviour
         int upgradeLevel = GetComponents<WeaponUpgrade>().Length;
         //Debug.Log(upgradeLevel);
 
-        if(upgradeLevel >= weaponSet.Length)
+        if (upgradeLevel >= weaponSet.Length)
         {
             upgradeLevel = weaponSet.Length - 1;
         }
@@ -55,7 +55,7 @@ public class WeaponSetController : MonoBehaviour
 
     private void fireRateUpdate()
     {
-        foreach(Weapon w in GetComponentsInChildren<Weapon>())
+        foreach (Weapon w in GetComponentsInChildren<Weapon>())
         {
             w.clearModifier();
 
