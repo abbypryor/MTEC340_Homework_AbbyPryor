@@ -1,0 +1,157 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Avenir-Book;
+\f3\froman\fcharset0 Times-Roman;\f4\fnil\fcharset0 Avenir-Heavy;\f5\fnil\fcharset0 Avenir-HeavyOblique;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid201\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid202\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa293\partightenfactor0
+\ls1\ilvl0
+\f0\b\fs36 \cf0 Pretests - Chapter 9 & 10
+\f1\b0\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 Abigail Pryor, MTEC-340-001
+\f2\fs29\fsmilli14667 \expnd0\expndtw0\kerning0
+\ul \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ulc0 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf0 \ulc0 \outl0\strokewidth0 \strokec2 Chapter 9 - Basic AI and Enemy Behavior
+\f3\fs24 \ulnone \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f2\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What is a NavMesh, a NavMeshAgent, and a NavMeshObstacle, and how do they work? 
+\f4\b NavMesh is a map of the walkable surfaces in a given level that is created through a process called baking, NavMeshAgent is what moves the object around the game (will auto avoid other agents/obstacles that it comes into contact with), NavMeshObstacle is a component that lets the system know that certain objects need to be avoided.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What is procedural programming and why is it beneficial? 
+\f4\b It focuses on the procedures/functions that operate on data rather than the data itself. It allows code to be more modular, have the ability to be reused, and less maintenance is required.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 How do you build a route on the baked NavMesh, and make NavMeshAgent entities navigate it? Be thorough. 
+\f4\b 1. Add NavMeshAgent component to GameObject that you want to move. 2. Bake the NavMesh using the baking tool. 3. Choose the destination of the object by calling SetDestination method and pass the position of the target location in. 4. The NavMeshAgent will now auto calculate a path on the NavMesh and go towards the target destination.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 How would you make a NavMeshAgent navigate the given locations at random? 
+\f4\b You can make it navigate given locations at random using the Random.insideUnitSphere method, which randomly generates positions within a given radius. Then, you can choose the destination of the NavMeshAgent to be the generated position using the SetDestination method. 
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What is defensive programming? 
+\f4\b It anticipates potential issues or errors in the code by initially writing code that prevents it. This can help keep crashes from happening or make error handling easier.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	6	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 How does the enemy entity determine when to follow the player? Why is the collision detection between the enemy and the player declared in the PlayerBehavior script? 
+\f4\b The enemy determines when to follow the player through checking if the player is within a certain range of distance first. The collision detection between the enemy and the player is declared in the PlayerBehavior script because the player is the one that is hitting the enemy.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	7	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Why would you store the player\'92s HP in the game manager class, but the enemy\'92s HP in the enemy class? 
+\f4\b Storing the player\'92s HP in the game manager class allows for easy access to the player\'92s health across all of the assets in the game. They are the most important in the game, so it makes sense. If you store the enemy\'92s HP it in the enemy class, you can encapsulate code easier and manage the enemy in one place. That way, if you have many enemies, they can all be separated from the player.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	8	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Why would you declare get and set properties as private?  
+\f4\b You would do this to ensure that the properties can only be accessed within the same class. It helps prevent any external code from accidentally changing the properties.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	9	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Why are we checking in the enemy\'92s collision function for Bullet(Clone) as opposed to Bullet? 
+\f4\b Every time you instantiate a bullet, Unity creates a new clone of the original bullet prefab/object. Therefore, you need to check for the clone in the collision rather than the original object.
+\f2\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	10	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What is refactoring? 
+\f4\b It is the process of improving code without changing its functionality. This can involve modifying existing code to make it more efficient, easier to read, and easier to maintain by removing unneccesary code and improving naming conventions/structures.
+\f2\b0 \
+\pard\tx720\pardeftab720\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul \ulc0 Chapter 10 - Revisiting Types, Methods, and Classes
+\f3\fs24 \ulnone \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0
+\f2\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What are the const and readonly modifier keywords used for, and how are they different? 
+\f4\b They are used to declare constants in C#. The difference is that const values are evaluated at compile time and can\'92t be changed at runtime, while readonly values gives you the same unmodifiable value as a constant, while still letting you assign its initial value at any time. It is usually in the Start() or Awake() method.
+\f2\b0 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What does the static keyword do and when would you use it? (The book\'92s definition is accurate but may be confusing, so you may find it helpful to look for additional resources to complement your answer. You may benefit from finding a resource that explains the static keyword applied to the Unity context.) 
+\f4\b The static keyword is used to define a member of a class that belongs to the class itself rather than to any specific instance of the class. You can access static members without creating an object of the class first. Static members can be used to manage global states or game manager classes (like score keeping).
+\f2\b0 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What is a method signature? What is method overloading and how can you overload a method? 
+\f4\b A method signature is like the fingerprint of a method, which describes its access level, return type, and parameters. Each one is unique to the compiler so that Visual Studio knows what to do with it. To overload a method, you can define multiple methods with the same name but with different parameter types. 
+\f2\b0 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What does the ref parameter do, and what are important considerations that should be kept in mind when using it? 
+\f4\b The ref parameter allows a method to modify the value of a variable passed as an argument. You have to pass a variable in as the argument, not an actual value or expression.
+\f2\b0 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What does the out parameter do, and what are important considerations that should be kept in mind when using it? 
+\f4\b The out parameter is similar to ref in the sense that it lets a method modify the value of a variable passed in as an argument, but with out, you do not need to initialize the variable before passing it in. The method is responsible for initializing the variable before it is returned.
+\f2\b0 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	6	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What are interfaces and when would you use them? How do interfaces handle properties? 
+\f4\b An interface is a contract that specifies a set of methods, properties, and events that a class must implement. You can use it to define a common set of functionality that different classes can use in their own ways. Interfaces define properties in the interface and then have the classes to do the implementing themselves.
+\f2\b0 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	7	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 How do you declare an interface? How do you tell a class to adopt an interface, and what considerations should be taken into account? 
+\f4\b To declare an interface, you use the interface keyword followed by the interface name and its members. If you want a class to adopt an interface, you can put \'91:<interface name>\'92 after the class name. The class must provide implementation for every member of the interface.
+\f2\b0 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	8	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What is an abstract class and how are they different from interfaces? How do you declare an abstract class, and what considerations should be taken into account? 
+\f4\b It is a class that cannot be instantiated on its own but instead needs to be subclassed. They can provide a base implementation for methods that need to be implemented by their subclasses. If you want to declare it, you use the abstract keyword before the class name. You also need to mark any methods that need to be implemented by the subclasses.
+\f2\b0 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	9	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What does the protected accessor modifier do?
+\f4\b  It allows a member of a class to be accessed by the class itself along with subclasses - but it does not effect any code outside of the heirarchy. 
+\f2\b0 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	10	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What keyword is essential for declaring a class adopting an abstract class? 
+\f4\b The \'91: <abstract class name>\'92 keyword is essential.
+\f2\b0 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	11	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What is a class extension and what considerations must be taken into account when extending a class? 
+\f4\b It is also known as inheritance, which is the ability to create a new class that is based on an existing class. You need to be sure not to override any methods or properties that the base class uses.
+\f2\b0 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	12	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 How do you add a custom method to a C# class? Be thorough. 
+\f4\b You need to define the method inside of the class definition like so:\
+\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 		\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 public class MyCustomClass : MonoBehaviour\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl1
+\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0          \expnd0\expndtw0\kerning0
+ \{
+\fs29\fsmilli14667 \outl0\strokewidth0 \strokec2   	// other class members here\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf0 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls3\ilvl1\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 		\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2    public void MyCustomMethod() \{\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0           \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2       // method code here\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2   	}  \}\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 		\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \}\
+\ls3\ilvl0
+\f2\b0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	13	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What are namespace conflicts and type aliasing? How do you define a type alias? 
+\f4\b This happens when 2+ namespaces define the same class or method name, causing a collision. Type aliasing is the ability to create a new name for an existing type to avoid naming conflicts. To define a type alias, you can use the 
+\f5\i using
+\f4\i0  directive before the name, followed by = operator and the type you want to alias. For example, you can write it like this:\
+ 		MyPlayer = MyGame.Players.Player;. Now you can refer to MyGame.Players.Player type as MyPlayer.\
+\ls3\ilvl0
+\f2\b0 \
+\pard\tx720\pardeftab720\partightenfactor0
+\cf0 \strokec2 \
+}
